@@ -3,9 +3,6 @@
 ## Packages used
 - React router
 - Axios
-- UUID
-- Joi
-- Headlessui
 - Cors
 - Dotenv
 - Tailwindcss
