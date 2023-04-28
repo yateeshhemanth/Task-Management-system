@@ -1,0 +1,41 @@
+version: "3.0"
+
+services:
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    container_name: frontend-docker
+    restart: always
+    links:
+      - backend
+
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    container_name: backend-docker
+    restart: always
+    links:
+      - db
+
+  db:
+    image: "mongo"
+    ports:
+      - "27017:27017"
+    container_name: db
+    volumes:
+      - ~/mongo/data:/data/todo
+
+  vc_db:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./api/app:/app
