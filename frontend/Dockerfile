@@ -1,5 +1,5 @@
 # Use Node.js v14 as the base image
-FROM node:16.20
+FROM node:20.0-bullseye-slim
 
 # Create a new directory for the frontend app
 RUN mkdir -p /usr/src/app/frontend
