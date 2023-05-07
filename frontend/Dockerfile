@@ -1,5 +1,5 @@
 # Use Node.js v14 as the base image
-FROM node:15.5.0
+FROM node:16.20
 
 # Create a new directory for the frontend app
 RUN mkdir -p /usr/src/app/frontend
