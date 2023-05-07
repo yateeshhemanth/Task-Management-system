@@ -1,4 +1,4 @@
-FROM node:15.5.0
+FROM node:16.20
 
 RUN mkdir -p /usr/src/app
 RUN mkdir -p /usr/src/app/backend
