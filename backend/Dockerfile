@@ -1,4 +1,4 @@
-FROM node:20.0-bullseye-slim
+FROM node:20.3.1-bullseye-slim
 
 RUN mkdir -p /usr/src/app
 RUN mkdir -p /usr/src/app/backend
